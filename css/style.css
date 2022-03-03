@@ -23,17 +23,28 @@ font-family: "Roboto", sans-serif; */
   --color-people: #f5f4fa;
   --footer-contact-color: rgba(255, 255, 255, 0.6);
 }
+html {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
 
 body {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
-
-  color: var(--text-color);
+  color: var(--primary-color-black);
   background-color: var(--background);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
 }
 .list {
   text-decoration: none;
@@ -41,6 +52,17 @@ body {
 }
 
 /* Хедер */
+.conteiner {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav-main {
+  display: flex;
+  align-items: center;
+}
 
 .header-logo {
   font-family: Raleway;
@@ -50,13 +72,16 @@ body {
   line-height: 31px;
   letter-spacing: 0.03em;
   color: var(--primary-color-black);
+  display: inline-block;
 }
 .logo-span {
   color: var(--accent-text);
+  display: inline-block;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .header-main {
-  background-color: var(--background);
 }
 .header-link {
   font-family: Roboto;
@@ -70,6 +95,12 @@ body {
 }
 
 /*Навигшация*/
+.nav {
+  display: flex;
+  align-items: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 
 .nav-item {
   color: var(--primary-color-black);
@@ -79,10 +110,12 @@ body {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
+  display: inline-block;
+  padding-right: 50px;
 }
 .nav-link {
   text-decoration: none;
-  color: var(--primary-color-black);
+  list-style-type: none;
 }
 .nav-link:hover {
   color: var(--accent-text);
@@ -90,7 +123,12 @@ body {
 .nav-item .nav-link.current {
   color: var(--accent-text);
 }
-
+.nav-list {
+  display: flex;
+  margin-left: 93px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 /*Contacts*/
 .contact-list > a {
   text-decoration: none;
@@ -106,12 +144,13 @@ body {
   color: var(--accent-text);
 }
 .contact-list {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.02em;
+  display: flex;
+  margin-left: auto;
+}
+.head-contacts.list {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  display: flex;
 }
 
 /*HERO*/
@@ -121,6 +160,7 @@ body {
   color: var(--background);
 }
 .title-text {
+  /* Шрифт */
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
@@ -128,27 +168,44 @@ body {
   line-height: 60px;
   text-align: center;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
   color: var(--background);
+  text-align: center;
+
+  /* Позиционирование */
+  display: inline-block;
+  padding-top: 200px;
+  padding-left: 452px;
+  padding-bottom: 280px;
+  padding-right: 452px;
+  min-width: 696px;
+  height: 120px;
 }
 
 /* Button */
 .button {
   color: var(--background);
   background-color: var(--accent-text);
+  border-radius: 4px;
+  min-height: 50px;
+  min-width: 200px;
+  text-align: center;
+  /* Шрифт */
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
-  line-height: 1, 87;
-  display: flex;
+  line-height: 1.87;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
 }
+.button-text {
+  display: inline-block;
+}
 /* Special */
 
 .studia-item > .studia-logo {
+  /* Шрифт */
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -159,6 +216,7 @@ body {
   color: var(--primary-color-black);
 }
 .studia-item > .studia-text {
+  /* Шрифт */
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -169,6 +227,7 @@ body {
 
 /* Чем занимаемся */
 .about > .about-logo {
+  /* Шрифт */
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -185,6 +244,7 @@ body {
   background-color: #f5f4fa;
 }
 .people > .people-logo {
+  /* Шрифт */
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -195,6 +255,7 @@ body {
   color: var(--primary-color-black);
 }
 .people-item > .people-name {
+  /* Шрифт */
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -205,6 +266,7 @@ body {
   color: var(--primary-color-black);
 }
 .people-item > .studia-text {
+  /* Шрифт */
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -226,6 +288,7 @@ body {
   list-style-type: none;
 }
 .footer-item > .footer-address {
+  /* Шрифт */
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -242,12 +305,12 @@ body {
   color: var(--background);
 }
 .mail-phone {
+  /* Шрифт */
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 24px;
-  /* or 171% */
+  line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--footer-contact-color);
   text-decoration: none;
